@@ -19,7 +19,7 @@ var customIcon = L.divIcon({
 
 
 const ipAddressFormat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-const a0832fisjf952fesf5853 = "at_rUzGrVs8fkA6Upfp38tDWV2G08bdV";
+const IPIFY_API_KEY = config.IPIFY_API_KEY;
 
 window.onload = function () {
     var submitButton = document.getElementById("submit-button");
@@ -63,7 +63,7 @@ function checkIPAddress() {
         console.log(userInput.value);
         successClickCount++;
 
-        url = "https://geo.ipify.org/api/v2/country,city?apiKey=" +a0832fisjf952fesf5853 +"&ipAddress=" + userInput.value;
+        url = "https://geo.ipify.org/api/v2/country,city?apiKey=" + config.IPIFY_API_KEY + "&ipAddress=" + userInput.value;
 
         fetch(url)
             .then((response) => response.json())
