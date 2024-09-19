@@ -129,9 +129,9 @@ function checkButtonStatus() {
 
     if (isButtonDisabled) {
     // Disable the button
-        submitButton.disabled = false;
-    } else {
         submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
     }
   }
   
